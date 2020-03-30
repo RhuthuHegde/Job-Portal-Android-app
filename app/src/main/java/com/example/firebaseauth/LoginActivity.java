@@ -33,17 +33,16 @@ public class LoginActivity extends AppCompatActivity {
                 String txt_email=email.getText().toString();
                 String txt_password=password.getText().toString();
                 loginUser(txt_email,txt_password);
+                startActivity(new Intent(LoginActivity.this,EmployerActivity.class));
+                finish();
             }
         });
     }
-
     private void loginUser(String email, String password) {
         mAuth.signInWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
                 Toast.makeText(LoginActivity.this, "Logged in Successfully!", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
-                finish();
             }
         });
     }
