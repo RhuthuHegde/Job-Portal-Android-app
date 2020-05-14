@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#3AD8C9"
     android:foreground="?android:attr/panelBackground"
-    tools:context=".EmployerActivity"
+    tools:context=".Employee"
     tools:ignore="UnusedAttribute">
 
     <EditText
