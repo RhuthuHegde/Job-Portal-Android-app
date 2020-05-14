@@ -16,16 +16,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class EmployerActivity extends AppCompatActivity {
-    private EditText editname;
-    private EditText editcname;
-    private EditText editphone;
-    private EditText editcity;
-    private EditText editcountry;
-    private EditText editvac;
+    public EditText editname;
+    public EditText editcname;
+    public EditText editphone;
+    public EditText editcity;
+    public EditText editcountry;
+    public EditText editvac;
     public Button enter;
    private FirebaseFirestore db;
 
     public EmployerActivity() {
+
     }
 
     @Override
