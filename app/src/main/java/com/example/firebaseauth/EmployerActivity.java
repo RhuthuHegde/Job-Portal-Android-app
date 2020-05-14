@@ -78,4 +78,7 @@ public class EmployerActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void enter(View view) {
+    }
 }

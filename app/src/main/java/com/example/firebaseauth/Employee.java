@@ -47,22 +47,20 @@ public class Employee extends AppCompatActivity {
     public EditText editecountry;
     public DatePickerDialog.OnDateSetListener mDateSetListener;
     public FirebaseFirestore db=FirebaseFirestore.getInstance();
-//    private TextView textview;
-//     private CollectionReference ref = db.collection("employers");
-//    private final TextView textview = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee);
         edob=findViewById(R.id.textView2);
-//         textview=findViewById(R.id.textView5);
         editename=findViewById(R.id.editText2);
         editposition=findViewById(R.id.editText4);
         editpcity=findViewById(R.id.editText8);
         editecountry=findViewById(R.id.editText9);
         Button search = findViewById(R.id.button9);
         Button enter = findViewById(R.id.button4);
+
+
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -125,94 +123,18 @@ public class Employee extends AppCompatActivity {
                 Intent i=new Intent(getBaseContext(),display.class);
                 i.putExtra("pos",position);
                 startActivity(i);
-
-
-//                startActivity(new Intent(Employee.this,display.class));
-//                finish();
-//                String position=editposition.getText().toString();
-//                Query q=ref.whereEqualTo("vacancy",position);
-//                q.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                      if(task.isSuccessful())
-//                      {
-//                          String data="";
-//                          for(QueryDocumentSnapshot documentSnapshot:task.getResult())
-//                          {
-//                              employer e;
-//                                        e = new employer();
-//                                        e.setEditdocumentid(documentSnapshot.getId());
-////                                        e.setEditdocumentid(documentSnapshot.getId());
-//                                        String documentid=e.getEditdocumentid();
-//                                        String name= e.getEditname();
-//                                        String cname=e.getEditcname();
-//                                        String phone=e.getEditphone();
-//                                        String city=e.getEditcity();
-//                                        String country=e.getEditcountry();
-//                                        String vac=e.getEditvac();
-//                              data = String.format("%sDocument ID: %s\nEmployer name: %s\n Company name: %s\n Phone: %s\n City: %s\n Country: %s\n Vacancy: %s\n\n", data, documentid, name, cname, phone, city, country, vac);
-//
-//                          }
-//                          textview.setText(data);
-//                      }
-//                    }
-//                });
-
-//                   q.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//                       @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-//                       @Override
-//                       public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                q.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-//                    @Override
-//                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-//                        Toast.makeText(Employee.this, "The search is successful", Toast.LENGTH_SHORT).show();
-//                        String data="";
-//                        for(QueryDocumentSnapshot documentSnapshot:queryDocumentSnapshots)
-//                        {
-//                            employer e;
-//                                        e = new employer();
-//                                        e.setEditdocumentid(documentSnapshot.getId());
-//                                        String documentid=e.getEditdocumentid();
-//                                        String name= e.getEditname();
-//                                        String cname=e.getEditcname();
-//                                        String phone=e.getEditphone();
-//                                        String city=e.getEditcity();
-//                                        String country=e.getEditcountry();
-//                                        String vac=e.getEditvac();
-//                                        data = String.format("%sDocument ID: %s\nEmployer name: %s\n Company name: %s\n Phone: %s\n City: %s\n Country: %s\n Vacancy: %s\n\n", data, documentid, name, cname, phone, city, country, vac);
-//                    }
-//                        textview.setText(data);
-//                    }
-//
-//                }).addOnFailureListener(new OnFailureListener() {
-//                    @Override
-//                    public void onFailure(@NonNull Exception e) {
-//                        Toast.makeText(Employee.this, "Search failed "+e, Toast.LENGTH_SHORT).show();
-//                    }
-//                });
-//                           if(task.isSuccessful())
-//                           {
-//                           StringBuilder data= new StringBuilder(" ");
-//                                    for (QueryDocumentSnapshot documentSnapshot : Objects.requireNonNull(task.getResult())) {
-//                                        employer e;
-//                                        e = new employer();
-//                                        e.setEditdocumentid(documentSnapshot.getId());
-////                                        e.setEditdocumentid(documentSnapshot.getId());
-//                                        String documentid=e.getEditdocumentid();
-//                                        String name= e.getEditname();
-//                                        String cname=e.getEditcname();
-//                                        String phone=e.getEditphone();
-//                                        String city=e.getEditcity();
-//                                        String country=e.getEditcountry();
-//                                        String vac=e.getEditvac();
-//                                        data.append("Document ID: ").append(documentid).append("\nEmployer name: ").append(name).append("\n Company name: ").append(cname).append("\n Phone: ").append(phone).append("\n City: ").append(city).append("\n Country: ").append(country).append("\n Vacancy: ").append(vac).append("\n\n");
-//                       }
-//                           textview.setText(data);
                    }
 
                 });
             }
-        }
+
+
+    public void search(View view) {
+    }
+
+    public void enter(View view) {
+    }
+}
 
 
 

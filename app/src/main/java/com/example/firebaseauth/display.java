@@ -16,7 +16,6 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 public class display extends AppCompatActivity {
     private TextView textview;
-//    public EditText editposition;
     public FirebaseFirestore db=FirebaseFirestore.getInstance();
     private CollectionReference ref = db.collection("employers");
 
@@ -43,9 +42,8 @@ protected void onCreate(Bundle SavedInstanceState) {
                 String city = documentSnapshot.getString("city");
                 String country = documentSnapshot.getString("country");
                 String vac = documentSnapshot.getString("vacancy");
-               data = String.format("%sDocument ID: %s\nEmployer name: %s\n Company name: %s\n Phone: %s\n City: %s\n Country: %s\n Vacancy: %s\n\n", data, documentid, name, cname, phone, city, country, vac);
-//                data+=data+"Document ID: "+documentid+"\n Employer name: "+name+"\n Phone: "+phone+"\n City: "+city+"\n Country :"+country+"\n Vacancy: "+vac+"\n";
-
+                //             data = String.format("%sDocument ID: %s\nEmployer name: %s\n Company name: %s\n Phone: %s\n City: %s\n Country: %s\n Vacancy: %s\n\n", data, documentid, name, cname, phone, city, country, vac);
+                data+=data+"Document ID: "+documentid+"\n Employer name: "+name+"\n Company name: "+cname+"\n Phone: "+phone+"\n City: "+city+"\n Country :"+country+"\n Vacancy: "+vac+"\n";
             }
             textview.setText(data);
 
